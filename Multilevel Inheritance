@@ -1,0 +1,40 @@
+#include <iostream>      //Multilevel Inheritance
+using namespace std;
+
+class Animal
+{
+    public:
+    void run()
+    {
+        cout<<"Running"<<endl;
+    }
+};
+
+class lion : public Animal
+{
+    public:
+    void roar()
+    {
+        cout<<"Roaring"<<endl;
+    }
+};
+class cub : public lion
+{
+    public:
+    void play()
+    {
+        cout<<"Playing"<<endl;
+    }
+};
+int main()
+{
+   // lion l;
+   //Animal l;
+   cub l;
+    l.run();
+    l.roar();
+    l.play();
+
+
+    return 0;
+}
