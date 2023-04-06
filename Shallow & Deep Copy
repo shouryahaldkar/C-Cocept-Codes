@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+class A
+{ 
+    
+    public:
+    int *p;
+    A()
+    {
+        p = new int;
+    }
+    A(A& ob)
+    {
+        p = new int;
+        *p =*(ob.p);
+    }
+    
+    void show()
+    {
+        cout<<"Data: "<<endl<<*p<<endl;
+    }
+};
+
+int main() {
+    // Write C++ code here
+    A ob;
+  *(ob.p) = 25;
+  ob.show();
+  
+  A ob2 = ob;   // copy constructor called
+  ob2.show();
+  
+  *(ob.p) = 45;
+  ob.show();
+  ob2.show();
+
+    return 0;
+}
