@@ -1,0 +1,30 @@
+#include <iostream>     //Single inheritance
+using namespace std;
+
+class Animal
+{
+    public:
+    void run()
+    {
+        cout<<"Running"<<endl;
+    }
+};
+
+class lion : public Animal
+{
+    public:
+    void roar()
+    {
+        cout<<"Roaring"<<endl;
+    }
+};
+int main()
+{
+   // lion l;
+   Animal l;
+    l.run();
+    l.roar();
+
+
+    return 0;
+}
