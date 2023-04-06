@@ -1,0 +1,29 @@
+#include<iostream>           //virtual keyword
+using namespace std;
+
+class vehicle
+{
+    public:
+    void accl()
+    {
+        cout<<"Acceelerrating  at 100 kmph"<<endl;
+    }
+};
+class car:public vehicle
+{
+    void accl()
+    {
+        cout<<"Acceelerrating  at 140 kmph"<<endl;
+    }
+    void brake()
+    {
+        cout<<"Braking...."<<endl;
+    }
+};
+int main()
+{
+    car obj;
+    vehicle& ob= obj;   // we have to make it run time binding
+    ob.accl();
+    
+}
