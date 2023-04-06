@@ -1,0 +1,68 @@
+#include <iostream>      //Multiple Inheritance
+using namespace std;
+
+class A
+{
+    public:
+    void show()
+    {
+        cout<<"Showing A"<<endl;
+    }
+};
+
+class B
+{
+    public:
+    void display()
+    {
+        cout<<"Showing B"<<endl;
+    }
+};
+class C : public A,public B
+{
+};
+int main()
+{
+
+  C obj;
+  obj.show();
+  obj.display();
+
+
+    return 0;
+}
+For Ambiguity
+#include <iostream>      //Multiple Inheritance
+using namespace std;
+
+class A
+{
+    public:
+    void show()
+    {
+        cout<<"Showing A"<<endl;
+    }
+};
+
+class B
+{
+    public:
+    void show()
+    {
+        cout<<"Showing B"<<endl;
+    }
+};
+class C : public A,public B
+{
+};
+int main()
+{
+
+  C obj;
+  obj.B :: show(); // to remove the problem of ambiguity we use  like this
+  
+  obj.A :: show();
+
+
+    return 0;
+}
