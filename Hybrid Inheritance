@@ -1,0 +1,32 @@
+#include <iostream>      //Hybrid Inheritance (Diamond Problem)
+using namespace std;
+
+class A
+{
+    public:
+    void show()
+    {
+        cout<<"Showing A"<<endl;
+    }
+};
+
+class B : virtual public A
+{
+
+};
+class C :virtual public A
+{
+};
+class D : public B,public C
+{
+    
+};
+int main()
+{
+
+   D ob;
+   ob.show();
+
+
+    return 0;
+}
