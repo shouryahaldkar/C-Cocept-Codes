@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+class music
+{ 
+    
+    public:
+    virtual void bass() = 0;
+    void play()
+    {
+        cout<<"playing music...."<<endl;
+    }
+};
+
+class musicdevice : public music{
+    public:
+    void bass()
+    {
+        cout<<"Extra bass..."<<endl;
+    }
+};
+class musicplayer      //using this we can access our methods indirectly
+{
+    musicdevice md;
+ public:
+ void startmusic()
+ {
+     md.play();
+     md.bass();
+     
+ }
+};
+int main()
+{
+    musicplayer mp;
+    mp.startmusic();
+    return 0;
+}
