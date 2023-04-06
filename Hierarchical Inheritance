@@ -1,0 +1,41 @@
+#include <iostream>      //Hierarchical Inheritance
+using namespace std;
+
+class Animal
+{
+    public:
+    void run()
+    {
+        cout<<"Running"<<endl;
+    }
+};
+
+class lion : public Animal
+{
+    public:
+    void roar()
+    {
+        cout<<"Roaring"<<endl;
+    }
+};
+class dog : public Animal
+{
+    public:
+    void bark()
+    {
+        cout<<"barking"<<endl;
+    }
+};
+int main()
+{
+   // lion l;
+   //Animal l;
+   dog l;
+   lion d;
+    l.run();
+    d.roar();
+    l.bark();
+
+
+    return 0;
+}
